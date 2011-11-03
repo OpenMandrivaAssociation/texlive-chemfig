@@ -1,3 +1,9 @@
+# revision 24018
+# category Package
+# catalog-ctan /macros/generic/chemfig
+# catalog-date 2011-09-19 22:46:18 +0200
+# catalog-license lppl1.3
+# catalog-version 1.0a
 Name:		texlive-chemfig
 Version:	1.0a
 Release:	1
@@ -44,6 +50,7 @@ instructions for the drawing.
 %doc %{_texmfdistdir}/doc/generic/chemfig/chemfig_doc_en.tex
 %doc %{_texmfdistdir}/doc/generic/chemfig/chemfig_doc_fr.pdf
 %doc %{_texmfdistdir}/doc/generic/chemfig/chemfig_doc_fr.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -54,3 +61,5 @@ instructions for the drawing.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
