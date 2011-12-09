@@ -1,11 +1,11 @@
-# revision 24018
+# revision 24715
 # category Package
 # catalog-ctan /macros/generic/chemfig
-# catalog-date 2011-09-19 22:46:18 +0200
+# catalog-date 2011-11-30 23:55:55 +0100
 # catalog-license lppl1.3
-# catalog-version 1.0a
+# catalog-version 1.0c
 Name:		texlive-chemfig
-Version:	1.0a
+Version:	1.0c
 Release:	1
 Summary:	Draw molecules with easy syntax
 Group:		Publishing
@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 The package provides the command \chemfig{<code>}, which draws
@@ -26,19 +24,19 @@ The package provides the command \chemfig{<code>}, which draws
 instructions for the drawing.
 
 %pre
-    %_texmf_mktexlsr_pre
+    %{_sbindir}/texlive.post
 
 %post
-    %_texmf_mktexlsr_post
+    %{_sbindir}/texlive.post
 
 %preun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
+	%{_sbindir}/texlive.post
     fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
