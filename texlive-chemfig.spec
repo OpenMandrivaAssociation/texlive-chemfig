@@ -1,11 +1,11 @@
-# revision 24715
+# revision 24900
 # category Package
 # catalog-ctan /macros/generic/chemfig
-# catalog-date 2011-11-30 23:55:55 +0100
+# catalog-date 2011-12-19 21:48:21 +0100
 # catalog-license lppl1.3
-# catalog-version 1.0c
+# catalog-version 1.0d
 Name:		texlive-chemfig
-Version:	1.0c
+Version:	1.0d
 Release:	1
 Summary:	Draw molecules with easy syntax
 Group:		Publishing
