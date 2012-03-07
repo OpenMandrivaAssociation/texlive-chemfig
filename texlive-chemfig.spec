@@ -1,11 +1,11 @@
-# revision 25103
+# revision 25504
 # category Package
 # catalog-ctan /macros/generic/chemfig
-# catalog-date 2012-01-14 00:27:11 +0100
+# catalog-date 2012-02-24 23:23:08 +0100
 # catalog-license lppl1.3
-# catalog-version 1.0e
+# catalog-version 1.0f
 Name:		texlive-chemfig
-Version:	1.0e
+Version:	1.0f
 Release:	1
 Summary:	Draw molecules with easy syntax
 Group:		Publishing
@@ -20,8 +20,12 @@ Requires(post):	texlive-kpathsea
 
 %description
 The package provides the command \chemfig{<code>}, which draws
-2D molecules using the tikz package. The <code> contains
-instructions for the drawing.
+molecules using the tikz package. The <code> argument provides
+instructions for the drawing operation. While the diagrams
+produced are essentially 2-dimensional, the package supports
+many of the conventional notations for illustrating the 3-
+dimensional layout of a molecule. The package uses TikZ for its
+actual drawing operations.
 
 %post
     %{_sbindir}/texlive.post
