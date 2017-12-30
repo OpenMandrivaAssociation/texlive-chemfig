@@ -1,12 +1,6 @@
-# revision 32270
-# category Package
-# catalog-ctan /macros/generic/chemfig
-# catalog-date 2013-11-27 22:19:17 +0100
-# catalog-license lppl1.3
-# catalog-version 1.0g
 Name:		texlive-chemfig
-Version:	1.0g
-Release:	9
+Version:	1.2e
+Release:	1
 Summary:	Draw molecules with easy syntax
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/chemfig
@@ -37,14 +31,8 @@ actual drawing operations.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/generic/chemfig/chemfig.sty
-%{_texmfdistdir}/tex/generic/chemfig/chemfig.tex
-%{_texmfdistdir}/tex/generic/chemfig/t-chemfig.tex
-%doc %{_texmfdistdir}/doc/generic/chemfig/README
-%doc %{_texmfdistdir}/doc/generic/chemfig/chemfig_doc_en.pdf
-%doc %{_texmfdistdir}/doc/generic/chemfig/chemfig_doc_en.tex
-%doc %{_texmfdistdir}/doc/generic/chemfig/chemfig_doc_fr.pdf
-%doc %{_texmfdistdir}/doc/generic/chemfig/chemfig_doc_fr.tex
+%{_texmfdistdir}/tex/generic/chemfig
+%doc %{_texmfdistdir}/doc/generic/chemfig
 
 #-----------------------------------------------------------------------
 %prep
