@@ -1,5 +1,5 @@
 Name:		texlive-chemfig
-Version:	1.2e
+Version:	1.31
 Release:	1
 Summary:	Draw molecules with easy syntax
 Group:		Publishing
