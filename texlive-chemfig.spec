@@ -1,6 +1,6 @@
 Name:		texlive-chemfig
-Version:	1.31
-Release:	2
+Version:	1.4
+Release:	1
 Summary:	Draw molecules with easy syntax
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/chemfig
