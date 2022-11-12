@@ -1,12 +1,12 @@
 Name:		texlive-chemfig
-Version:	1.4
+Version:	64529
 Release:	1
 Summary:	Draw molecules with easy syntax
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/chemfig
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chemfig.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chemfig.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chemfig.r64529.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chemfig.doc.r64529.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -22,12 +22,12 @@ dimensional layout of a molecule. The package uses TikZ for its
 actual drawing operations.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -36,7 +36,7 @@ actual drawing operations.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
