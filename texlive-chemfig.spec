@@ -1,45 +1,28 @@
-Name:		texlive-chemfig
-Version:	69227
-Release:	1
+%global tl_name chemfig
+%global tl_revision 78296
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	1.71
+Release:	%{tl_revision}.1
 Summary:	Draw molecules with easy syntax
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/generic/chemfig
-License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chemfig.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chemfig.doc.r%{version}.tar.xz
+License:	lppl1.3c
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/chemfig.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/chemfig.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Requires:	texlive(simplekv)
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-The package provides the command \chemfig{<code>}, which draws
-molecules using the tikz package. The <code> argument provides
-instructions for the drawing operation. While the diagrams
-produced are essentially 2-dimensional, the package supports
-many of the conventional notations for illustrating the 3-
-dimensional layout of a molecule. The package uses TikZ for its
-actual drawing operations.
+The package provides the command \chemfig{<code>}, which draws molecules
+using the TikZ package. The <code> argument provides instructions for
+the drawing operation. While the diagrams produced are essentially
+2-dimensional, the package supports many of the conventional notations
+for illustrating the 3-dimensional layout of a molecule. The package
+uses TikZ for its actual drawing operations.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/generic/chemfig
-%doc %{_texmfdistdir}/doc/generic/chemfig
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc %{buildroot}%{_texmfdistdir}
