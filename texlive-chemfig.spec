@@ -13,8 +13,6 @@ Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/chemfig.r%{tl_re
 Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/chemfig.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-BuildRequires:	texlive-tlpkg
-%texlive_base_requires
 Requires:	texlive(simplekv)
 Provides:	texlive(%{tl_name}) = %{tl_revision}
 
